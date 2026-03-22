@@ -42,7 +42,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .page-wrap{max-width:1140px;margin:0 auto;padding:0 32px 80px}
 
 /* ── Product hero ── */
-.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
+.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
 .product-img-stage{background:var(--surface);border:1px solid var(--border);border-radius:20px;min-height:340px;display:flex;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
 .product-img-stage::before{content:'';position:absolute;top:-40px;left:-40px;width:240px;height:240px;background:radial-gradient(circle,var(--amber-glow),transparent 65%);border-radius:50%;pointer-events:none}
 .product-img-stage img{max-width:100%;max-height:280px;object-fit:contain;position:relative;z-index:1}
@@ -50,9 +50,31 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .badge{font-size:.7rem;font-weight:500;letter-spacing:.06em;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-mid)}
 .badge.green{border-color:var(--green);color:var(--green)}
 .badge.amber{border-color:var(--amber);color:var(--amber)}
-.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
-.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:12px}
-.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:22px;max-width:460px}
+.product-info{overflow:visible;padding-top:4px}
+.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px;overflow:visible;word-break:break-word;hyphens:auto}
+.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.75;margin-bottom:26px;max-width:460px}
+
+/* ── How it works steps ── */
+.steps-list{margin:8px 0 0;display:flex;flex-direction:column;gap:0}
+.step-item{display:flex;gap:0;position:relative}
+.step-item:not(:last-child)::after{content:'';position:absolute;left:17px;top:36px;width:2px;height:calc(100% - 8px);background:var(--border)}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--amber);color:#0c0c0c;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;position:relative;z-index:1}
+.step-body{padding:0 0 24px 16px}
+.step-name{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:4px}
+.step-desc{font-size:.86rem;color:var(--text-mid);line-height:1.65}
+
+/* ── How to use ── */
+.how-list{margin:8px 0 0;counter-reset:how;display:flex;flex-direction:column;gap:12px}
+.how-item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;counter-increment:how}
+.how-item::before{content:counter(how);font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;color:var(--amber);background:var(--amber-dim);border:1px solid var(--amber-glow);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.how-text{font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.how-text strong{color:var(--text)}
+
+/* ── Compare note ── */
+.compare-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-top:8px}
+.compare-box p{font-size:.9rem;color:var(--text-mid);line-height:1.7}
+.compare-box strong{color:var(--text)}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}
 .spec-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 14px}
 .spec-label{font-size:.67rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:3px}
@@ -267,7 +289,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
     <div class="product-eyebrow">CTEK</div>
     <h1 class="product-title">CTEK MXS 5.0 Smart 12V Battery Charger for Cars & Superbikes</h1>
     <p class="product-tagline">8-step smart 12V charger for cars, bikes and superbikes. Reconditions sulfated batteries.</p>
-    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">12V</div></div><div class="spec-item"><div class="spec-label">current</div><div class="spec-value">5A</div></div><div class="spec-item"><div class="spec-label">battery types</div><div class="spec-value">WET, MF, GEL, AGM, Ca/Ca</div></div><div class="spec-item"><div class="spec-label">warranty</div><div class="spec-value">5 years</div></div></div>
+    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">12V</div></div><div class="spec-item"><div class="spec-label">current</div><div class="spec-value">5A</div></div><div class="spec-item"><div class="spec-label">battery range</div><div class="spec-value">14–130Ah</div></div><div class="spec-item"><div class="spec-label">battery types</div><div class="spec-value">WET, MF, GEL, AGM, Ca/Ca</div></div><div class="spec-item"><div class="spec-label">ip rating</div><div class="spec-value">IP65</div></div><div class="spec-item"><div class="spec-label">steps</div><div class="spec-value">8-step automatic</div></div><div class="spec-item"><div class="spec-label">warranty</div><div class="spec-value">5 years</div></div></div>
     <div class="price-block">
       <div class="price-row">
         <div class="price-main">₹13,900</div>
@@ -295,6 +317,87 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="trust-divider"></div>
   <div class="trust-item"><div class="trust-icon">📞</div><div><div class="trust-title">Direct Support</div><div class="trust-sub"><a href="https://wa.me/919311211157">+91 93112 11157</a></div></div></div>
 </div>
+
+
+<section class="section">
+  <div class="section-label">About This Product</div>
+  <h2 class="section-title">Why the CTEK MXS 5.0 Smart?</h2>
+  <div class="section-body"><p>Most Indian car owners discover their battery is dying when it is already too late — the car won't start, it's 7am, and they're late for work. The CTEK MXS 5.0 is built to make sure that never happens. It is the most trusted 12V smart charger in India, used by car enthusiasts, workshops, and OEM manufacturers like BMW, Ducati, Rolls-Royce, and Porsche. Critically for Indian cars, the MXS 5.0 has a dedicated AGM mode. Most post-2018 Indian cars — Creta, Nexon, Honda City, Swift — come with AGM batteries from the factory. AGM batteries cannot be safely charged with a basic charger. The MXS 5.0 protects battery chemistry and extends life significantly.</p></div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">The 8-step process explained</h2>
+  <div class="steps-list">
+    
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-name">Desulphation</div>
+        <div class="step-desc">Detects and attempts to recover a heavily sulfated battery by sending high-voltage pulses to break down lead sulphate crystals.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-name">Soft Start</div>
+        <div class="step-desc">Tests if the battery can accept a charge. If the battery is too damaged, the charger stops safely and shows an error.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-name">Bulk Charge</div>
+        <div class="step-desc">Charges at full 5A current until the battery reaches approximately 80% capacity. This is the fastest phase.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-name">Absorption</div>
+        <div class="step-desc">Reduces current as the battery approaches full charge to avoid overheating and gassing.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <div class="step-name">Battery Analysis</div>
+        <div class="step-desc">Analyses the battery to determine if it can hold a full charge. Identifies weak batteries that need replacement.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <div class="step-name">Recondition (optional)</div>
+        <div class="step-desc">Hold MODE button 5 seconds to activate. Charges to a higher voltage to dissolve deep sulphation — recovers batteries that appear completely dead.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">7</div>
+      <div class="step-body">
+        <div class="step-name">Float Maintenance</div>
+        <div class="step-desc">Holds battery at 100% with a constant low-level charge. Safe to leave connected indefinitely.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">8</div>
+      <div class="step-body">
+        <div class="step-name">Pulse Maintenance</div>
+        <div class="step-desc">Monitors and tops up the battery with small pulses. Used during long-term storage — keeps battery perfect for months.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How To Use</div>
+  <h2 class="section-title">Step-by-step instructions</h2>
+  <div class="how-list">
+    <div class="how-item"><span class="how-text">Connect the red clamp to the positive (+) terminal, black clamp to the negative (−) terminal.</span></div><div class="how-item"><span class="how-text">Plug the charger into a 230V socket. The charger starts automatically.</span></div><div class="how-item"><span class="how-text">For AGM batteries (most post-2018 Indian cars): press the MODE button once before connecting. The AGM indicator light will illuminate.</span></div><div class="how-item"><span class="how-text">For a completely dead battery: connect as normal, then hold the MODE button for 5 seconds to activate RECOND mode. Leave for 12–24 hours.</span></div><div class="how-item"><span class="how-text">The green light indicates a fully charged battery. The charger automatically switches to maintenance mode — safe to leave connected.</span></div>
+  </div>
+</section>
 
 <section class="section">
   <div class="section-label">Compatibility</div>
@@ -342,6 +445,15 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
     <button class="compat-ask-btn" onclick="document.getElementById('arjunAnchor').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('chatText').focus(),600)">Ask Arjun →</button>
   </div>
   <div class="not-suitable"><strong>Not suitable for:</strong> Royal Enfield / KTM / superbikes — use CT5 PowerSport instead. Toyota Fortuner / Ford Endeavour (80–90Ah) — use MXS 7.0 instead.</div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Compares</div>
+  <h2 class="section-title">vs other options</h2>
+  <div class="compare-box">
+    <p><strong>vs </strong>MXS 3.8: The 5.0 is faster (5A <strong>vs </strong>3.8A), handles larger batteries up to 130Ah, has full RECOND mode, and properly supports AGM batteries. The ₹2,500 difference is worth it for any car owner. <strong>vs </strong>MXS 7.0: The 7.0 is for large SUVs and trucks with 80–225Ah batteries. For most Indian passenger cars, the 5.0 is the right choice.</p>
+  </div>
 </section>
 
 <section class="section">
@@ -455,8 +567,8 @@ PRODUCT: CTEK MXS 5.0 Smart 12V Battery Charger for Cars & Superbikes
 BRAND: CTEK
 PRICE: ₹13,900 (base price before GST). Total with 18% GST: ₹16,402
 DESCRIPTION: 8-step smart 12V charger for cars, bikes and superbikes. Reconditions sulfated batteries.
-SPECS: {"voltage":"12V","current":"5A","battery_types":"WET, MF, GEL, AGM, Ca/Ca","warranty":"5 years"}
-USE CASES: Car battery maintenance, Superbike charging, Reconditioning sulfated batteries
+SPECS: {"voltage":"12V","current":"5A","battery_range":"14–130Ah","battery_types":"WET, MF, GEL, AGM, Ca/Ca","ip_rating":"IP65","steps":"8-step automatic","warranty":"5 years"}
+USE CASES: Car battery maintenance, Superbike charging, Reconditioning sulfated batteries, Long-term storage maintenance
 
 COMPATIBILITY:
 - Hyundai Creta (all years): 45–55Ah · AGM on 2020+ (AGM mode)

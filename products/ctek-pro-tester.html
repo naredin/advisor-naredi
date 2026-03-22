@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India | naredi.in</title>
-<meta name="description" content="CTEK's professional grade 12V/24V battery and charging system analyzer. Buy the CTEK CTEK Pro Battery Tester at ₹69,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
+<meta name="description" content="CTEK's professional diagnostic tester with colour touchscreen and Bluetooth. Full 12V/24V system analysis. Buy the CTEK CTEK Pro Battery Tester at ₹69,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
 <link rel="canonical" href="https://advisor.naredi.in/products/ctek-pro-tester.html">
 <meta property="og:title" content="CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India | naredi.in">
-<meta property="og:description" content="CTEK's professional grade 12V/24V battery and charging system analyzer. Buy the CTEK CTEK Pro Battery Tester at ₹69,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
+<meta property="og:description" content="CTEK's professional diagnostic tester with colour touchscreen and Bluetooth. Full 12V/24V system analysis. Buy the CTEK CTEK Pro Battery Tester at ₹69,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
 <meta property="og:url" content="https://advisor.naredi.in/products/ctek-pro-tester.html">
 <meta property="og:image" content="https://naredi.in/cdn/shop/files/PRO_BATTERY_TESTER-web-big-1.jpg">
 <meta property="og:site_name" content="naredi.in">
@@ -42,7 +42,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .page-wrap{max-width:1140px;margin:0 auto;padding:0 32px 80px}
 
 /* ── Product hero ── */
-.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
+.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
 .product-img-stage{background:var(--surface);border:1px solid var(--border);border-radius:20px;min-height:340px;display:flex;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
 .product-img-stage::before{content:'';position:absolute;top:-40px;left:-40px;width:240px;height:240px;background:radial-gradient(circle,var(--amber-glow),transparent 65%);border-radius:50%;pointer-events:none}
 .product-img-stage img{max-width:100%;max-height:280px;object-fit:contain;position:relative;z-index:1}
@@ -50,9 +50,31 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .badge{font-size:.7rem;font-weight:500;letter-spacing:.06em;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-mid)}
 .badge.green{border-color:var(--green);color:var(--green)}
 .badge.amber{border-color:var(--amber);color:var(--amber)}
-.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
-.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:12px}
-.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:22px;max-width:460px}
+.product-info{overflow:visible;padding-top:4px}
+.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px;overflow:visible;word-break:break-word;hyphens:auto}
+.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.75;margin-bottom:26px;max-width:460px}
+
+/* ── How it works steps ── */
+.steps-list{margin:8px 0 0;display:flex;flex-direction:column;gap:0}
+.step-item{display:flex;gap:0;position:relative}
+.step-item:not(:last-child)::after{content:'';position:absolute;left:17px;top:36px;width:2px;height:calc(100% - 8px);background:var(--border)}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--amber);color:#0c0c0c;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;position:relative;z-index:1}
+.step-body{padding:0 0 24px 16px}
+.step-name{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:4px}
+.step-desc{font-size:.86rem;color:var(--text-mid);line-height:1.65}
+
+/* ── How to use ── */
+.how-list{margin:8px 0 0;counter-reset:how;display:flex;flex-direction:column;gap:12px}
+.how-item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;counter-increment:how}
+.how-item::before{content:counter(how);font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;color:var(--amber);background:var(--amber-dim);border:1px solid var(--amber-glow);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.how-text{font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.how-text strong{color:var(--text)}
+
+/* ── Compare note ── */
+.compare-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-top:8px}
+.compare-box p{font-size:.9rem;color:var(--text-mid);line-height:1.7}
+.compare-box strong{color:var(--text)}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}
 .spec-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 14px}
 .spec-label{font-size:.67rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:3px}
@@ -227,7 +249,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 }
 @media(max-width:480px){.compat-grid{grid-template-columns:1fr}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India","description":"CTEK's professional grade 12V/24V battery and charging system analyzer.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/PRO_BATTERY_TESTER-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-pro-tester","priceCurrency":"INR","price":"69900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India","description":"CTEK's professional diagnostic tester with colour touchscreen and Bluetooth. Full 12V/24V system analysis.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/PRO_BATTERY_TESTER-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-pro-tester","priceCurrency":"INR","price":"69900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know if my battery is going to fail before it does?","acceptedAnswer":{"@type":"Answer","text":"Test the CCA (Cold Cranking Amps). A battery rated at 500 CCA that tests at 350 CCA (70%) is getting weak — replace it before it fails. Most professional testers show a health percentage and a clear GOOD/REPLACE result."}},{"@type":"Question","name":"Can I test a battery without removing it from the car?","acceptedAnswer":{"@type":"Answer","text":"Yes. All testers here work in-vehicle — connect the clamps to the battery terminals without disconnecting the battery. Make sure the car is off and no large loads are running during the test."}},{"@type":"Question","name":"What is the difference between CCA and Ah rating?","acceptedAnswer":{"@type":"Answer","text":"Ah (ampere-hours) measures storage capacity — how much energy the battery holds. CCA measures starting power — how much current it can deliver in a cold start. For testing battery health, CCA is the more important number."}},{"@type":"Question","name":"Do I need a battery tester with a printer?","acceptedAnswer":{"@type":"Answer","text":"For home use, no. For a workshop, yes — a printed report given to the customer removes any argument about whether the battery is actually bad. It documents your diagnosis professionally."}},{"@type":"Question","name":"Is naredi.in an authorized dealer?","acceptedAnswer":{"@type":"Answer","text":"Yes. naredi.in is the authorized distributor in India for CTEK, Rislone, OzCharge, Autool and Foxwell. Products are sourced directly from the brands — not grey market imports. Warranty is handled by naredi.in directly in India."}},{"@type":"Question","name":"What is the return policy?","acceptedAnswer":{"@type":"Answer","text":"14-day returns from the date of delivery, hassle-free. Contact naredi.in via WhatsApp at +91 93112 11157 to initiate a return."}},{"@type":"Question","name":"How long does shipping take?","acceptedAnswer":{"@type":"Answer","text":"Free shipping across India. Metro cities typically 2-3 days, other cities 3-5 days. Tracking is provided once dispatched."}}]}</script>
 </head>
 <body>
@@ -248,7 +270,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 
 <div class="page-wrap">
 
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India","description":"CTEK's professional grade 12V/24V battery and charging system analyzer.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/PRO_BATTERY_TESTER-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-pro-tester","priceCurrency":"INR","price":"69900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India","description":"CTEK's professional diagnostic tester with colour touchscreen and Bluetooth. Full 12V/24V system analysis.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/PRO_BATTERY_TESTER-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-pro-tester","priceCurrency":"INR","price":"69900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know if my battery is going to fail before it does?","acceptedAnswer":{"@type":"Answer","text":"Test the CCA (Cold Cranking Amps). A battery rated at 500 CCA that tests at 350 CCA (70%) is getting weak — replace it before it fails. Most professional testers show a health percentage and a clear GOOD/REPLACE result."}},{"@type":"Question","name":"Can I test a battery without removing it from the car?","acceptedAnswer":{"@type":"Answer","text":"Yes. All testers here work in-vehicle — connect the clamps to the battery terminals without disconnecting the battery. Make sure the car is off and no large loads are running during the test."}},{"@type":"Question","name":"What is the difference between CCA and Ah rating?","acceptedAnswer":{"@type":"Answer","text":"Ah (ampere-hours) measures storage capacity — how much energy the battery holds. CCA measures starting power — how much current it can deliver in a cold start. For testing battery health, CCA is the more important number."}},{"@type":"Question","name":"Do I need a battery tester with a printer?","acceptedAnswer":{"@type":"Answer","text":"For home use, no. For a workshop, yes — a printed report given to the customer removes any argument about whether the battery is actually bad. It documents your diagnosis professionally."}},{"@type":"Question","name":"Is naredi.in an authorized dealer?","acceptedAnswer":{"@type":"Answer","text":"Yes. naredi.in is the authorized distributor in India for CTEK, Rislone, OzCharge, Autool and Foxwell. Products are sourced directly from the brands — not grey market imports. Warranty is handled by naredi.in directly in India."}},{"@type":"Question","name":"What is the return policy?","acceptedAnswer":{"@type":"Answer","text":"14-day returns from the date of delivery, hassle-free. Contact naredi.in via WhatsApp at +91 93112 11157 to initiate a return."}},{"@type":"Question","name":"How long does shipping take?","acceptedAnswer":{"@type":"Answer","text":"Free shipping across India. Metro cities typically 2-3 days, other cities 3-5 days. Tracking is provided once dispatched."}}]}</script>
 
 <section class="product-hero">
@@ -266,8 +288,8 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="product-info">
     <div class="product-eyebrow">CTEK</div>
     <h1 class="product-title">CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India</h1>
-    <p class="product-tagline">CTEK's professional grade 12V/24V battery and charging system analyzer.</p>
-    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">12V/24V</div></div><div class="spec-item"><div class="spec-label">display</div><div class="spec-value">Colour touchscreen</div></div><div class="spec-item"><div class="spec-label">test params</div><div class="spec-value">Battery, alternator, starter, cranking</div></div><div class="spec-item"><div class="spec-label">connectivity</div><div class="spec-value">Bluetooth</div></div></div>
+    <p class="product-tagline">CTEK's professional diagnostic tester with colour touchscreen and Bluetooth. Full 12V/24V system analysis.</p>
+    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">12V / 24V</div></div><div class="spec-item"><div class="spec-label">test params</div><div class="spec-value">Battery, alternator, starter, cranking — full system</div></div><div class="spec-item"><div class="spec-label">connectivity</div><div class="spec-value">Bluetooth</div></div><div class="spec-item"><div class="spec-label">display</div><div class="spec-value">Colour touchscreen</div></div><div class="spec-item"><div class="spec-label">battery types</div><div class="spec-value">All types</div></div><div class="spec-item"><div class="spec-label">warranty</div><div class="spec-value">2 years</div></div></div>
     <div class="price-block">
       <div class="price-row">
         <div class="price-main">₹69,900</div>
@@ -296,6 +318,59 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="trust-item"><div class="trust-icon">📞</div><div><div class="trust-title">Direct Support</div><div class="trust-sub"><a href="https://wa.me/919311211157">+91 93112 11157</a></div></div></div>
 </div>
 
+
+<section class="section">
+  <div class="section-label">About This Product</div>
+  <h2 class="section-title">Why the CTEK Pro Battery Tester?</h2>
+  <div class="section-body"><p>The CTEK Pro Tester is in a different category from other testers — it is the professional diagnostic instrument used by authorised CTEK service partners. The colour touchscreen and Bluetooth connectivity allow a workshop to test a battery, transfer the results wirelessly to a tablet, and include the diagnostic report in the service record. For dealerships and high-end workshops where documentation and professional appearance matter as much as accuracy, the CTEK Pro Tester is the right instrument.</p></div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">The 4-step process explained</h2>
+  <div class="steps-list">
+    
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-name">Full System Test</div>
+        <div class="step-desc">Tests battery, alternator, and starter motor in sequence — a complete starting system diagnostic.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-name">Bluetooth Data Transfer</div>
+        <div class="step-desc">Sends all test results wirelessly to the CTEK app for logging and reporting.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-name">Touchscreen Interface</div>
+        <div class="step-desc">Large colour display makes operation simple — no small buttons to navigate.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-name">12V and 24V</div>
+        <div class="step-desc">Single unit covers all vehicle types from passenger cars to heavy trucks.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How To Use</div>
+  <h2 class="section-title">Step-by-step instructions</h2>
+  <div class="how-list">
+    <div class="how-item"><span class="how-text">Pair with CTEK app via Bluetooth.</span></div><div class="how-item"><span class="how-text">Connect test leads to battery terminals.</span></div><div class="how-item"><span class="how-text">Select vehicle type and battery specifications on the touchscreen.</span></div><div class="how-item"><span class="how-text">Run full system test — approximately 2 minutes for complete battery, alternator, and starter analysis.</span></div><div class="how-item"><span class="how-text">Transfer report to app for documentation.</span></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="section-label">Compatibility</div>
   <h2 class="section-title">Works with these vehicles</h2>
@@ -318,6 +393,15 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
     <button class="compat-ask-btn" onclick="document.getElementById('arjunAnchor').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('chatText').focus(),600)">Ask Arjun →</button>
   </div>
   <div class="not-suitable"><strong>Not suitable for:</strong> Home users — ₹69,900 is a professional investment. KW210 or KW600 for home use.</div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Compares</div>
+  <h2 class="section-title">vs other options</h2>
+  <div class="compare-box">
+    <p><strong>vs </strong>Foxwell BT-780: The BT-780 is a professional workshop tester at ₹19,400. The CTEK Pro Tester at ₹69,900 adds Bluetooth reporting, touchscreen, and the CTEK brand assurance — justified for dealerships and authorised service centres. For a general workshop, the BT-780 provides equivalent testing capability at a much lower price.</p>
+  </div>
 </section>
 
 <section class="section">
@@ -430,9 +514,9 @@ const SYSTEM='You are Arjun, naredi.in\'s automotive advisor. The customer is vi
 PRODUCT: CTEK Pro Battery Tester | Best Swedish 12V/24V Professional Analyzer India
 BRAND: CTEK
 PRICE: ₹69,900 (base price before GST). Total with 18% GST: ₹82,482
-DESCRIPTION: CTEK\'s professional grade 12V/24V battery and charging system analyzer.
-SPECS: {"voltage":"12V/24V","display":"Colour touchscreen","test_params":"Battery, alternator, starter, cranking","connectivity":"Bluetooth"}
-USE CASES: Professional workshop, Dealership diagnostics, Full system testing
+DESCRIPTION: CTEK\'s professional diagnostic tester with colour touchscreen and Bluetooth. Full 12V/24V system analysis.
+SPECS: {"voltage":"12V / 24V","test_params":"Battery, alternator, starter, cranking — full system","connectivity":"Bluetooth","display":"Colour touchscreen","battery_types":"All types","warranty":"2 years"}
+USE CASES: Professional dealership diagnostics, Full system analysis, Fleet battery management, Authorised service centres
 
 COMPATIBILITY:
 - Workshop — all 12V cars: Full system test via Bluetooth (12V mode)

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology | naredi.in</title>
-<meta name="description" content="Next-gen CTEK charger with adaptive charging algorithm. Works on all 12V battery types. Buy the CTEK CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology at ₹18,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
+<meta name="description" content="Next-generation CTEK with adaptive charging algorithm. Works on all 12V battery types including LiFePO4. Buy the CTEK CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology at ₹18,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
 <link rel="canonical" href="https://advisor.naredi.in/products/ctek-nxt-5.html">
 <meta property="og:title" content="CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology | naredi.in">
-<meta property="og:description" content="Next-gen CTEK charger with adaptive charging algorithm. Works on all 12V battery types. Buy the CTEK CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology at ₹18,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
+<meta property="og:description" content="Next-generation CTEK with adaptive charging algorithm. Works on all 12V battery types including LiFePO4. Buy the CTEK CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology at ₹18,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
 <meta property="og:url" content="https://advisor.naredi.in/products/ctek-nxt-5.html">
 <meta property="og:image" content="https://naredi.in/cdn/shop/files/NXT_5-web-big-1.jpg">
 <meta property="og:site_name" content="naredi.in">
@@ -42,7 +42,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .page-wrap{max-width:1140px;margin:0 auto;padding:0 32px 80px}
 
 /* ── Product hero ── */
-.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
+.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
 .product-img-stage{background:var(--surface);border:1px solid var(--border);border-radius:20px;min-height:340px;display:flex;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
 .product-img-stage::before{content:'';position:absolute;top:-40px;left:-40px;width:240px;height:240px;background:radial-gradient(circle,var(--amber-glow),transparent 65%);border-radius:50%;pointer-events:none}
 .product-img-stage img{max-width:100%;max-height:280px;object-fit:contain;position:relative;z-index:1}
@@ -50,9 +50,31 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .badge{font-size:.7rem;font-weight:500;letter-spacing:.06em;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-mid)}
 .badge.green{border-color:var(--green);color:var(--green)}
 .badge.amber{border-color:var(--amber);color:var(--amber)}
-.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
-.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:12px}
-.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:22px;max-width:460px}
+.product-info{overflow:visible;padding-top:4px}
+.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px;overflow:visible;word-break:break-word;hyphens:auto}
+.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.75;margin-bottom:26px;max-width:460px}
+
+/* ── How it works steps ── */
+.steps-list{margin:8px 0 0;display:flex;flex-direction:column;gap:0}
+.step-item{display:flex;gap:0;position:relative}
+.step-item:not(:last-child)::after{content:'';position:absolute;left:17px;top:36px;width:2px;height:calc(100% - 8px);background:var(--border)}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--amber);color:#0c0c0c;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;position:relative;z-index:1}
+.step-body{padding:0 0 24px 16px}
+.step-name{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:4px}
+.step-desc{font-size:.86rem;color:var(--text-mid);line-height:1.65}
+
+/* ── How to use ── */
+.how-list{margin:8px 0 0;counter-reset:how;display:flex;flex-direction:column;gap:12px}
+.how-item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;counter-increment:how}
+.how-item::before{content:counter(how);font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;color:var(--amber);background:var(--amber-dim);border:1px solid var(--amber-glow);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.how-text{font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.how-text strong{color:var(--text)}
+
+/* ── Compare note ── */
+.compare-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-top:8px}
+.compare-box p{font-size:.9rem;color:var(--text-mid);line-height:1.7}
+.compare-box strong{color:var(--text)}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}
 .spec-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 14px}
 .spec-label{font-size:.67rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:3px}
@@ -227,7 +249,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 }
 @media(max-width:480px){.compat-grid{grid-template-columns:1fr}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology","description":"Next-gen CTEK charger with adaptive charging algorithm. Works on all 12V battery types.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/NXT_5-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-nxt-5","priceCurrency":"INR","price":"18900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology","description":"Next-generation CTEK with adaptive charging algorithm. Works on all 12V battery types including LiFePO4.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/NXT_5-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-nxt-5","priceCurrency":"INR","price":"18900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is a CTEK charger different from a cheap charger?","acceptedAnswer":{"@type":"Answer","text":"A basic charger pushes current until you disconnect it, which can overcharge and damage the battery. CTEK chargers use a multi-step algorithm — they assess battery condition, desulfate if needed, charge at the optimal rate, and switch to maintenance mode automatically. Safe to leave connected indefinitely."}},{"@type":"Question","name":"Can I charge an AGM battery with a standard charger?","acceptedAnswer":{"@type":"Answer","text":"No — AGM batteries require a specific voltage ceiling and charging profile. A standard charger will overcharge an AGM battery and destroy it. All CTEK chargers with an AGM mode are safe for AGM batteries."}},{"@type":"Question","name":"How often should I charge my car battery?","acceptedAnswer":{"@type":"Answer","text":"If you drive daily, your alternator keeps the battery charged. But if the car sits unused for more than 2 weeks, connect a charger. In Indian summers, charge and test every 3 months — heat is the primary cause of early battery death."}},{"@type":"Question","name":"Is it safe to leave a CTEK charger connected for months?","acceptedAnswer":{"@type":"Answer","text":"Yes. CTEK chargers automatically switch to pulse maintenance mode once charging is complete. They deliver tiny pulses to keep the battery at 100% without overcharging. Many customers leave them connected for the entire monsoon/winter storage period."}},{"@type":"Question","name":"Is naredi.in an authorized dealer?","acceptedAnswer":{"@type":"Answer","text":"Yes. naredi.in is the authorized distributor in India for CTEK, Rislone, OzCharge, Autool and Foxwell. Products are sourced directly from the brands — not grey market imports. Warranty is handled by naredi.in directly in India."}},{"@type":"Question","name":"What is the return policy?","acceptedAnswer":{"@type":"Answer","text":"14-day returns from the date of delivery, hassle-free. Contact naredi.in via WhatsApp at +91 93112 11157 to initiate a return."}},{"@type":"Question","name":"How long does shipping take?","acceptedAnswer":{"@type":"Answer","text":"Free shipping across India. Metro cities typically 2-3 days, other cities 3-5 days. Tracking is provided once dispatched."}}]}</script>
 </head>
 <body>
@@ -248,7 +270,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 
 <div class="page-wrap">
 
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology","description":"Next-gen CTEK charger with adaptive charging algorithm. Works on all 12V battery types.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/NXT_5-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-nxt-5","priceCurrency":"INR","price":"18900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology","description":"Next-generation CTEK with adaptive charging algorithm. Works on all 12V battery types including LiFePO4.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/NXT_5-web-big-1.jpg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-nxt-5","priceCurrency":"INR","price":"18900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is a CTEK charger different from a cheap charger?","acceptedAnswer":{"@type":"Answer","text":"A basic charger pushes current until you disconnect it, which can overcharge and damage the battery. CTEK chargers use a multi-step algorithm — they assess battery condition, desulfate if needed, charge at the optimal rate, and switch to maintenance mode automatically. Safe to leave connected indefinitely."}},{"@type":"Question","name":"Can I charge an AGM battery with a standard charger?","acceptedAnswer":{"@type":"Answer","text":"No — AGM batteries require a specific voltage ceiling and charging profile. A standard charger will overcharge an AGM battery and destroy it. All CTEK chargers with an AGM mode are safe for AGM batteries."}},{"@type":"Question","name":"How often should I charge my car battery?","acceptedAnswer":{"@type":"Answer","text":"If you drive daily, your alternator keeps the battery charged. But if the car sits unused for more than 2 weeks, connect a charger. In Indian summers, charge and test every 3 months — heat is the primary cause of early battery death."}},{"@type":"Question","name":"Is it safe to leave a CTEK charger connected for months?","acceptedAnswer":{"@type":"Answer","text":"Yes. CTEK chargers automatically switch to pulse maintenance mode once charging is complete. They deliver tiny pulses to keep the battery at 100% without overcharging. Many customers leave them connected for the entire monsoon/winter storage period."}},{"@type":"Question","name":"Is naredi.in an authorized dealer?","acceptedAnswer":{"@type":"Answer","text":"Yes. naredi.in is the authorized distributor in India for CTEK, Rislone, OzCharge, Autool and Foxwell. Products are sourced directly from the brands — not grey market imports. Warranty is handled by naredi.in directly in India."}},{"@type":"Question","name":"What is the return policy?","acceptedAnswer":{"@type":"Answer","text":"14-day returns from the date of delivery, hassle-free. Contact naredi.in via WhatsApp at +91 93112 11157 to initiate a return."}},{"@type":"Question","name":"How long does shipping take?","acceptedAnswer":{"@type":"Answer","text":"Free shipping across India. Metro cities typically 2-3 days, other cities 3-5 days. Tracking is provided once dispatched."}}]}</script>
 
 <section class="product-hero">
@@ -266,8 +288,8 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="product-info">
     <div class="product-eyebrow">CTEK</div>
     <h1 class="product-title">CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology</h1>
-    <p class="product-tagline">Next-gen CTEK charger with adaptive charging algorithm. Works on all 12V battery types.</p>
-    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">12V</div></div><div class="spec-item"><div class="spec-label">current</div><div class="spec-value">5A</div></div><div class="spec-item"><div class="spec-label">battery types</div><div class="spec-value">All 12V types including LiFePO4</div></div><div class="spec-item"><div class="spec-label">warranty</div><div class="spec-value">5 years</div></div></div>
+    <p class="product-tagline">Next-generation CTEK with adaptive charging algorithm. Works on all 12V battery types including LiFePO4.</p>
+    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">12V</div></div><div class="spec-item"><div class="spec-label">current</div><div class="spec-value">5A</div></div><div class="spec-item"><div class="spec-label">battery range</div><div class="spec-value">All 12V batteries</div></div><div class="spec-item"><div class="spec-label">battery types</div><div class="spec-value">Adaptive: WET, AGM, EFB, GEL, LiFePO4</div></div><div class="spec-item"><div class="spec-label">steps</div><div class="spec-value">Adaptive automatic</div></div><div class="spec-item"><div class="spec-label">warranty</div><div class="spec-value">5 years</div></div></div>
     <div class="price-block">
       <div class="price-row">
         <div class="price-main">₹18,900</div>
@@ -295,6 +317,66 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="trust-divider"></div>
   <div class="trust-item"><div class="trust-icon">📞</div><div><div class="trust-title">Direct Support</div><div class="trust-sub"><a href="https://wa.me/919311211157">+91 93112 11157</a></div></div></div>
 </div>
+
+
+<section class="section">
+  <div class="section-label">About This Product</div>
+  <h2 class="section-title">Why the CTEK NXT 5 12V?</h2>
+  <div class="section-body"><p>The NXT 5 is CTEK's newest standard charger — the replacement for the MXS 5.0 in CTEK's product line. It uses an adaptive charging algorithm rather than a fixed 8-step program, meaning it continuously adjusts based on the battery's real-time response rather than following a preset sequence. It also handles all battery types including LiFePO4 without needing to select a mode — significant convenience over older models. If you are buying your first CTEK charger in 2025, the NXT 5 is the most current technology at a mid-range price.</p></div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">The 5-step process explained</h2>
+  <div class="steps-list">
+    
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-name">Battery Profiling</div>
+        <div class="step-desc">Analyses the battery's current state and chemistry before charging begins.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-name">Adaptive Charge</div>
+        <div class="step-desc">Continuously adjusts current and voltage based on real-time battery response — not a fixed algorithm.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-name">Chemistry Detection</div>
+        <div class="step-desc">Automatically identifies WET, AGM, EFB, GEL, or LiFePO4 and applies the correct parameters.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-name">Completion Analysis</div>
+        <div class="step-desc">Verifies the battery has reached full capacity.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <div class="step-name">Maintenance</div>
+        <div class="step-desc">Adaptive maintenance mode keeps the battery at peak condition indefinitely.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How To Use</div>
+  <h2 class="section-title">Step-by-step instructions</h2>
+  <div class="how-list">
+    <div class="how-item"><span class="how-text">Connect red clamp to positive (+), black to negative (−).</span></div><div class="how-item"><span class="how-text">Plug into 230V. The NXT 5 detects battery type and begins automatically — no mode selection needed.</span></div><div class="how-item"><span class="how-text">For LiFePO4 lithium batteries: works automatically, no separate Li mode to select.</span></div><div class="how-item"><span class="how-text">Green light = fully charged. Leave connected for maintenance.</span></div>
+  </div>
+</section>
 
 <section class="section">
   <div class="section-label">Compatibility</div>
@@ -326,6 +408,15 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
     <button class="compat-ask-btn" onclick="document.getElementById('arjunAnchor').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('chatText').focus(),600)">Ask Arjun →</button>
   </div>
   <div class="not-suitable"><strong>Not suitable for:</strong> 24V vehicles — use MXT series. 6V classic cars — use XC 0.8.</div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Compares</div>
+  <h2 class="section-title">vs other options</h2>
+  <div class="compare-box">
+    <p><strong>vs </strong>MXS 5.0: The NXT 5 is newer, handles LiFePO4 automatically, and uses an adaptive algorithm. At ₹5,000 more than the MXS 5.0, it is the better long-term buy if you want CTEK's latest technology. <strong>vs </strong>CS ONE: The CS ONE adds Bluetooth and app control for ₹11,000 more — the NXT 5 is the right choice if you don't need smartphone integration.</p>
+  </div>
 </section>
 
 <section class="section">
@@ -438,9 +529,9 @@ const SYSTEM='You are Arjun, naredi.in\'s automotive advisor. The customer is vi
 PRODUCT: CTEK NXT 5 12V Smart Battery Charger - Next Generation Adaptive Charging Technology
 BRAND: CTEK
 PRICE: ₹18,900 (base price before GST). Total with 18% GST: ₹22,302
-DESCRIPTION: Next-gen CTEK charger with adaptive charging algorithm. Works on all 12V battery types.
-SPECS: {"voltage":"12V","current":"5A","battery_types":"All 12V types including LiFePO4","warranty":"5 years"}
-USE CASES: Universal 12V charging, Modern smart vehicle care, All battery types
+DESCRIPTION: Next-generation CTEK with adaptive charging algorithm. Works on all 12V battery types including LiFePO4.
+SPECS: {"voltage":"12V","current":"5A","battery_range":"All 12V batteries","battery_types":"Adaptive: WET, AGM, EFB, GEL, LiFePO4","steps":"Adaptive automatic","warranty":"5 years"}
+USE CASES: Universal 12V charging, Modern vehicle care, All battery types, Replacement for older CTEK models
 
 COMPATIBILITY:
 - All modern 12V cars: Adaptive — works on all types (Adaptive mode)

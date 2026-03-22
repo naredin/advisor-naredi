@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OBD Tools | naredi.in Advisor</title>
-<meta name="description" content="Browse 6 OBD Tools from naredi.in — India's authorized dealer. OBD2 diagnostic scanners from Autool, Konnwei and Blue Driver.">
+<meta name="description" content="Browse 6 OBD Tools from naredi.in — India's authorized dealer. OBD2 diagnostic scanners from Autool, Konnwei and Blue Driver. Read fault codes in 30 seconds.">
 <link rel="canonical" href="https://advisor.naredi.in/products/category-obd-tools.html">
 <meta property="og:title" content="OBD Tools | naredi.in Advisor">
-<meta property="og:description" content="Browse 6 OBD Tools from naredi.in — India's authorized dealer. OBD2 diagnostic scanners from Autool, Konnwei and Blue Driver.">
+<meta property="og:description" content="Browse 6 OBD Tools from naredi.in — India's authorized dealer. OBD2 diagnostic scanners from Autool, Konnwei and Blue Driver. Read fault codes in 30 seconds.">
 <meta property="og:url" content="https://advisor.naredi.in/products/category-obd-tools.html">
 
 <meta property="og:site_name" content="naredi.in">
@@ -42,7 +42,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .page-wrap{max-width:1140px;margin:0 auto;padding:0 32px 80px}
 
 /* ── Product hero ── */
-.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
+.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
 .product-img-stage{background:var(--surface);border:1px solid var(--border);border-radius:20px;min-height:340px;display:flex;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
 .product-img-stage::before{content:'';position:absolute;top:-40px;left:-40px;width:240px;height:240px;background:radial-gradient(circle,var(--amber-glow),transparent 65%);border-radius:50%;pointer-events:none}
 .product-img-stage img{max-width:100%;max-height:280px;object-fit:contain;position:relative;z-index:1}
@@ -50,9 +50,31 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .badge{font-size:.7rem;font-weight:500;letter-spacing:.06em;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-mid)}
 .badge.green{border-color:var(--green);color:var(--green)}
 .badge.amber{border-color:var(--amber);color:var(--amber)}
-.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
-.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:12px}
-.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:22px;max-width:460px}
+.product-info{overflow:visible;padding-top:4px}
+.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px;overflow:visible;word-break:break-word;hyphens:auto}
+.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.75;margin-bottom:26px;max-width:460px}
+
+/* ── How it works steps ── */
+.steps-list{margin:8px 0 0;display:flex;flex-direction:column;gap:0}
+.step-item{display:flex;gap:0;position:relative}
+.step-item:not(:last-child)::after{content:'';position:absolute;left:17px;top:36px;width:2px;height:calc(100% - 8px);background:var(--border)}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--amber);color:#0c0c0c;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;position:relative;z-index:1}
+.step-body{padding:0 0 24px 16px}
+.step-name{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:4px}
+.step-desc{font-size:.86rem;color:var(--text-mid);line-height:1.65}
+
+/* ── How to use ── */
+.how-list{margin:8px 0 0;counter-reset:how;display:flex;flex-direction:column;gap:12px}
+.how-item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;counter-increment:how}
+.how-item::before{content:counter(how);font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;color:var(--amber);background:var(--amber-dim);border:1px solid var(--amber-glow);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.how-text{font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.how-text strong{color:var(--text)}
+
+/* ── Compare note ── */
+.compare-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-top:8px}
+.compare-box p{font-size:.9rem;color:var(--text-mid);line-height:1.7}
+.compare-box strong{color:var(--text)}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}
 .spec-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 14px}
 .spec-label{font-size:.67rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:3px}
@@ -249,7 +271,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
     <div class="cat-header">
       <div class="section-label">OBD Tools</div>
       <h1>OBD Tools</h1>
-      <p>OBD2 diagnostic scanners from Autool, Konnwei and Blue Driver.</p>
+      <p>OBD2 diagnostic scanners from Autool, Konnwei and Blue Driver. Read fault codes in 30 seconds.</p>
     </div>
     <div class="products-grid"><a href="/products/autool-cs520-obd-scanner.html" class="prod-card">
       <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/AutoolCS520.jpg" alt="Autool CS520 OBD Scanner | Compact Multi-System Diagnostic Tool India" loading="lazy" width="200" height="180"></div>

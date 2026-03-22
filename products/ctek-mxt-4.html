@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India | naredi.in</title>
-<meta name="description" content="24V smart charger for trucks, buses and heavy commercial vehicles. Buy the CTEK CTEK MXT 4.0 24V Battery Charger at ₹27,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
+<meta name="description" content="Smart 24V charger for light trucks, mini buses and commercial vehicles. 8-step automatic program. Buy the CTEK CTEK MXT 4.0 24V Battery Charger at ₹27,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
 <link rel="canonical" href="https://advisor.naredi.in/products/ctek-mxt-4.html">
 <meta property="og:title" content="CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India | naredi.in">
-<meta property="og:description" content="24V smart charger for trucks, buses and heavy commercial vehicles. Buy the CTEK CTEK MXT 4.0 24V Battery Charger at ₹27,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
+<meta property="og:description" content="Smart 24V charger for light trucks, mini buses and commercial vehicles. 8-step automatic program. Buy the CTEK CTEK MXT 4.0 24V Battery Charger at ₹27,900 + GST from naredi.in — India's authorized dealer. Free shipping.">
 <meta property="og:url" content="https://advisor.naredi.in/products/ctek-mxt-4.html">
 <meta property="og:image" content="https://naredi.in/cdn/shop/files/CTEKMXT4_c30d8de0-98d6-4a75-a5dc-166030156c94.svg">
 <meta property="og:site_name" content="naredi.in">
@@ -42,7 +42,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .page-wrap{max-width:1140px;margin:0 auto;padding:0 32px 80px}
 
 /* ── Product hero ── */
-.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
+.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:40px 0 56px;border-bottom:1px solid var(--border);align-items:start}
 .product-img-stage{background:var(--surface);border:1px solid var(--border);border-radius:20px;min-height:340px;display:flex;align-items:center;justify-content:center;padding:32px;position:relative;overflow:hidden}
 .product-img-stage::before{content:'';position:absolute;top:-40px;left:-40px;width:240px;height:240px;background:radial-gradient(circle,var(--amber-glow),transparent 65%);border-radius:50%;pointer-events:none}
 .product-img-stage img{max-width:100%;max-height:280px;object-fit:contain;position:relative;z-index:1}
@@ -50,9 +50,31 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:14px 3
 .badge{font-size:.7rem;font-weight:500;letter-spacing:.06em;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-mid)}
 .badge.green{border-color:var(--green);color:var(--green)}
 .badge.amber{border-color:var(--amber);color:var(--amber)}
-.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
-.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:700;line-height:1.15;letter-spacing:-.03em;margin-bottom:12px}
-.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:22px;max-width:460px}
+.product-info{overflow:visible;padding-top:4px}
+.product-eyebrow{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
+.product-title{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:700;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px;overflow:visible;word-break:break-word;hyphens:auto}
+.product-tagline{font-size:.95rem;color:var(--text-mid);font-weight:300;line-height:1.75;margin-bottom:26px;max-width:460px}
+
+/* ── How it works steps ── */
+.steps-list{margin:8px 0 0;display:flex;flex-direction:column;gap:0}
+.step-item{display:flex;gap:0;position:relative}
+.step-item:not(:last-child)::after{content:'';position:absolute;left:17px;top:36px;width:2px;height:calc(100% - 8px);background:var(--border)}
+.step-num{width:36px;height:36px;border-radius:50%;background:var(--amber);color:#0c0c0c;font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;position:relative;z-index:1}
+.step-body{padding:0 0 24px 16px}
+.step-name{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:4px}
+.step-desc{font-size:.86rem;color:var(--text-mid);line-height:1.65}
+
+/* ── How to use ── */
+.how-list{margin:8px 0 0;counter-reset:how;display:flex;flex-direction:column;gap:12px}
+.how-item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;counter-increment:how}
+.how-item::before{content:counter(how);font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;color:var(--amber);background:var(--amber-dim);border:1px solid var(--amber-glow);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.how-text{font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.how-text strong{color:var(--text)}
+
+/* ── Compare note ── */
+.compare-box{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 22px;margin-top:8px}
+.compare-box p{font-size:.9rem;color:var(--text-mid);line-height:1.7}
+.compare-box strong{color:var(--text)}
 .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}
 .spec-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:11px 14px}
 .spec-label{font-size:.67rem;font-weight:500;text-transform:uppercase;letter-spacing:.1em;color:var(--text-dim);margin-bottom:3px}
@@ -227,7 +249,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 }
 @media(max-width:480px){.compat-grid{grid-template-columns:1fr}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India","description":"24V smart charger for trucks, buses and heavy commercial vehicles.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/CTEKMXT4_c30d8de0-98d6-4a75-a5dc-166030156c94.svg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-mxt-4","priceCurrency":"INR","price":"27900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India","description":"Smart 24V charger for light trucks, mini buses and commercial vehicles. 8-step automatic program.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/CTEKMXT4_c30d8de0-98d6-4a75-a5dc-166030156c94.svg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-mxt-4","priceCurrency":"INR","price":"27900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is a CTEK charger different from a cheap charger?","acceptedAnswer":{"@type":"Answer","text":"A basic charger pushes current until you disconnect it, which can overcharge and damage the battery. CTEK chargers use a multi-step algorithm — they assess battery condition, desulfate if needed, charge at the optimal rate, and switch to maintenance mode automatically. Safe to leave connected indefinitely."}},{"@type":"Question","name":"Can I charge an AGM battery with a standard charger?","acceptedAnswer":{"@type":"Answer","text":"No — AGM batteries require a specific voltage ceiling and charging profile. A standard charger will overcharge an AGM battery and destroy it. All CTEK chargers with an AGM mode are safe for AGM batteries."}},{"@type":"Question","name":"How often should I charge my car battery?","acceptedAnswer":{"@type":"Answer","text":"If you drive daily, your alternator keeps the battery charged. But if the car sits unused for more than 2 weeks, connect a charger. In Indian summers, charge and test every 3 months — heat is the primary cause of early battery death."}},{"@type":"Question","name":"Is it safe to leave a CTEK charger connected for months?","acceptedAnswer":{"@type":"Answer","text":"Yes. CTEK chargers automatically switch to pulse maintenance mode once charging is complete. They deliver tiny pulses to keep the battery at 100% without overcharging. Many customers leave them connected for the entire monsoon/winter storage period."}},{"@type":"Question","name":"Is naredi.in an authorized dealer?","acceptedAnswer":{"@type":"Answer","text":"Yes. naredi.in is the authorized distributor in India for CTEK, Rislone, OzCharge, Autool and Foxwell. Products are sourced directly from the brands — not grey market imports. Warranty is handled by naredi.in directly in India."}},{"@type":"Question","name":"What is the return policy?","acceptedAnswer":{"@type":"Answer","text":"14-day returns from the date of delivery, hassle-free. Contact naredi.in via WhatsApp at +91 93112 11157 to initiate a return."}},{"@type":"Question","name":"How long does shipping take?","acceptedAnswer":{"@type":"Answer","text":"Free shipping across India. Metro cities typically 2-3 days, other cities 3-5 days. Tracking is provided once dispatched."}}]}</script>
 </head>
 <body>
@@ -248,7 +270,7 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 
 <div class="page-wrap">
 
-<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India","description":"24V smart charger for trucks, buses and heavy commercial vehicles.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/CTEKMXT4_c30d8de0-98d6-4a75-a5dc-166030156c94.svg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-mxt-4","priceCurrency":"INR","price":"27900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org/","@type":"Product","name":"CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India","description":"Smart 24V charger for light trucks, mini buses and commercial vehicles. 8-step automatic program.","brand":{"@type":"Brand","name":"CTEK"},"image":"https://naredi.in/cdn/shop/files/CTEKMXT4_c30d8de0-98d6-4a75-a5dc-166030156c94.svg","offers":{"@type":"Offer","url":"https://naredi.in/products/ctek-mxt-4","priceCurrency":"INR","price":"27900","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"naredi.in"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is a CTEK charger different from a cheap charger?","acceptedAnswer":{"@type":"Answer","text":"A basic charger pushes current until you disconnect it, which can overcharge and damage the battery. CTEK chargers use a multi-step algorithm — they assess battery condition, desulfate if needed, charge at the optimal rate, and switch to maintenance mode automatically. Safe to leave connected indefinitely."}},{"@type":"Question","name":"Can I charge an AGM battery with a standard charger?","acceptedAnswer":{"@type":"Answer","text":"No — AGM batteries require a specific voltage ceiling and charging profile. A standard charger will overcharge an AGM battery and destroy it. All CTEK chargers with an AGM mode are safe for AGM batteries."}},{"@type":"Question","name":"How often should I charge my car battery?","acceptedAnswer":{"@type":"Answer","text":"If you drive daily, your alternator keeps the battery charged. But if the car sits unused for more than 2 weeks, connect a charger. In Indian summers, charge and test every 3 months — heat is the primary cause of early battery death."}},{"@type":"Question","name":"Is it safe to leave a CTEK charger connected for months?","acceptedAnswer":{"@type":"Answer","text":"Yes. CTEK chargers automatically switch to pulse maintenance mode once charging is complete. They deliver tiny pulses to keep the battery at 100% without overcharging. Many customers leave them connected for the entire monsoon/winter storage period."}},{"@type":"Question","name":"Is naredi.in an authorized dealer?","acceptedAnswer":{"@type":"Answer","text":"Yes. naredi.in is the authorized distributor in India for CTEK, Rislone, OzCharge, Autool and Foxwell. Products are sourced directly from the brands — not grey market imports. Warranty is handled by naredi.in directly in India."}},{"@type":"Question","name":"What is the return policy?","acceptedAnswer":{"@type":"Answer","text":"14-day returns from the date of delivery, hassle-free. Contact naredi.in via WhatsApp at +91 93112 11157 to initiate a return."}},{"@type":"Question","name":"How long does shipping take?","acceptedAnswer":{"@type":"Answer","text":"Free shipping across India. Metro cities typically 2-3 days, other cities 3-5 days. Tracking is provided once dispatched."}}]}</script>
 
 <section class="product-hero">
@@ -266,8 +288,8 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="product-info">
     <div class="product-eyebrow">CTEK</div>
     <h1 class="product-title">CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India</h1>
-    <p class="product-tagline">24V smart charger for trucks, buses and heavy commercial vehicles.</p>
-    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">24V</div></div><div class="spec-item"><div class="spec-label">current</div><div class="spec-value">4A</div></div><div class="spec-item"><div class="spec-label">battery types</div><div class="spec-value">WET, AGM, GEL</div></div><div class="spec-item"><div class="spec-label">warranty</div><div class="spec-value">5 years</div></div></div>
+    <p class="product-tagline">Smart 24V charger for light trucks, mini buses and commercial vehicles. 8-step automatic program.</p>
+    <div class="spec-grid"><div class="spec-item"><div class="spec-label">voltage</div><div class="spec-value">24V</div></div><div class="spec-item"><div class="spec-label">current</div><div class="spec-value">4A</div></div><div class="spec-item"><div class="spec-label">battery range</div><div class="spec-value">Up to 160Ah</div></div><div class="spec-item"><div class="spec-label">battery types</div><div class="spec-value">WET, AGM, GEL</div></div><div class="spec-item"><div class="spec-label">steps</div><div class="spec-value">8-step automatic</div></div><div class="spec-item"><div class="spec-label">warranty</div><div class="spec-value">5 years</div></div></div>
     <div class="price-block">
       <div class="price-row">
         <div class="price-main">₹27,900</div>
@@ -296,6 +318,87 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="trust-item"><div class="trust-icon">📞</div><div><div class="trust-title">Direct Support</div><div class="trust-sub"><a href="https://wa.me/919311211157">+91 93112 11157</a></div></div></div>
 </div>
 
+
+<section class="section">
+  <div class="section-label">About This Product</div>
+  <h2 class="section-title">Why the CTEK MXT 4.0 24V?</h2>
+  <div class="section-body"><p>Light commercial vehicles — Tata Ace, Mahindra Jeeto, Ashok Leyland Dost, small buses — run on 24V electrical systems. These vehicles work hard, often sit unused overnight in parking lots, and their batteries take a constant beating. A 12V charger will not work on a 24V system. The MXT 4.0 is CTEK's entry-level 24V charger, bringing the same intelligent 8-step charging to the commercial vehicle segment. At 4A, it is appropriate for batteries up to 160Ah — covering the majority of light commercial vehicles in India.</p></div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Works</div>
+  <h2 class="section-title">The 8-step process explained</h2>
+  <div class="steps-list">
+    
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <div class="step-name">Desulphation</div>
+        <div class="step-desc">24V recovery pulses for commercial batteries that have been deeply discharged overnight.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <div class="step-name">Soft Start</div>
+        <div class="step-desc">Safety check for the 24V system.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <div class="step-name">Bulk Charge</div>
+        <div class="step-desc">4A at 24V — charges light truck batteries efficiently.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <div class="step-name">Absorption</div>
+        <div class="step-desc">Completes charging safely.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <div class="step-name">Battery Analysis</div>
+        <div class="step-desc">Identifies failing commercial batteries before they strand the vehicle.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <div class="step-name">Recondition</div>
+        <div class="step-desc">Recovery mode for heavily discharged commercial batteries.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">7</div>
+      <div class="step-body">
+        <div class="step-name">Float</div>
+        <div class="step-desc">24V maintenance charge for overnight storage.</div>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">8</div>
+      <div class="step-body">
+        <div class="step-name">Pulse Maintenance</div>
+        <div class="step-desc">Long-term maintenance for fleet vehicles between service periods.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How To Use</div>
+  <h2 class="section-title">Step-by-step instructions</h2>
+  <div class="how-list">
+    <div class="how-item"><span class="how-text">Confirm vehicle is 24V — check battery label or vehicle manual.</span></div><div class="how-item"><span class="how-text">Connect red clamp to positive (+), black to negative (−).</span></div><div class="how-item"><span class="how-text">Plug into 230V. Charger operates at 24V automatically.</span></div><div class="how-item"><span class="how-text">For a flat 100Ah 24V battery: approximately 25–30 hours at 4A — for faster charging use MXT 14.</span></div><div class="how-item"><span class="how-text">Green light indicates full charge.</span></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="section-label">Compatibility</div>
   <h2 class="section-title">Works with these vehicles</h2>
@@ -322,6 +425,15 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
     <button class="compat-ask-btn" onclick="document.getElementById('arjunAnchor').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('chatText').focus(),600)">Ask Arjun →</button>
   </div>
   <div class="not-suitable"><strong>Not suitable for:</strong> 12V cars and bikes — use MXS 5.0 instead. Heavy trucks needing more current — use MXT 14.</div>
+</section>
+
+
+<section class="section">
+  <div class="section-label">How It Compares</div>
+  <h2 class="section-title">vs other options</h2>
+  <div class="compare-box">
+    <p><strong>vs </strong>MXT 14: For heavy trucks and large commercial vehicles with 200Ah+ batteries, the MXT 14 at 14A is much faster. The MXT 4 is appropriate for light commercial vehicles and situations where time is not critical. <strong>vs </strong>12V chargers: Do not use any 12V CTEK charger on a 24V system.</p>
+  </div>
 </section>
 
 <section class="section">
@@ -434,9 +546,9 @@ const SYSTEM='You are Arjun, naredi.in\'s automotive advisor. The customer is vi
 PRODUCT: CTEK MXT 4.0 24V Battery Charger | Smart 24V Charger for Trucks, Buses Commercial Vehicles in India
 BRAND: CTEK
 PRICE: ₹27,900 (base price before GST). Total with 18% GST: ₹32,922
-DESCRIPTION: 24V smart charger for trucks, buses and heavy commercial vehicles.
-SPECS: {"voltage":"24V","current":"4A","battery_types":"WET, AGM, GEL","warranty":"5 years"}
-USE CASES: Truck battery charging, Bus battery maintenance, 24V commercial vehicle care
+DESCRIPTION: Smart 24V charger for light trucks, mini buses and commercial vehicles. 8-step automatic program.
+SPECS: {"voltage":"24V","current":"4A","battery_range":"Up to 160Ah","battery_types":"WET, AGM, GEL","steps":"8-step automatic","warranty":"5 years"}
+USE CASES: Light truck battery charging, Mini bus maintenance, 24V commercial vehicle care, Auto electrician workshop
 
 COMPATIBILITY:
 - Tata Ace / Ashok Leyland Dost: 24V light commercial (24V mode)
