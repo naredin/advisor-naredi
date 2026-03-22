@@ -536,8 +536,21 @@ YOUR JOB:
 - Do not use markdown formatting — plain text only
 - If asked about price, give both base price and GST-inclusive total';
 const PROXY='https://crm-zoho-backend.replit.app/api/arjun';
+const SAVE_SUMMARY_URL='https://crm-zoho-backend.replit.app/api/arjun/save-summary';
+const LOG_CHAT_URL='https://crm-zoho-backend.replit.app/api/arjun/log-chat';
+const PRODUCT_SLUG='ctek-comfort-indicator-eyelet-m8';
+const PRODUCT_NAME='CTEK Comfort Indicator Eyelet M8 | Effortless 12V Battery Charging for India';
+const PRODUCT_BRAND='CTEK';
+const PRODUCT_CATEGORY='accessories';
+const PRODUCT_PRICE=2900;
+const PRODUCT_IMAGE='https://naredi.in/cdn/shop/files/INDICATOR_EYELET_M8-web-big-1.jpg';
+const SHOPIFY_URL='https://naredi.in/products/ctek-comfort-indicator-eyelet-m8';
+
 let history=[{role:'assistant',content:'Hi! I\'m Arjun — naredi.in\'s automotive advisor. You\'re looking at the CTEK Comfort Indicator Eyelet M8 | Effortless 12V Battery Charging for India. What\'s your vehicle or question?'}];
 let busy=false;
+let detectedVehicle='';
+let detectedCity='';
+let msgCount=0;
 const msgsEl=document.getElementById('msgs');
 const textEl=document.getElementById('chatText');
 const sendEl=document.getElementById('chatSend');
@@ -552,10 +565,77 @@ function showTyping(){const d=document.createElement('div');d.className='typing'
 function hideTyping(){const t=document.getElementById('typing');if(t)t.remove()}
 function startChat(msg){textEl.value=msg;sendChat()}
 
+// Extract vehicle and city from user messages (simple keyword detection)
+function extractContext(text){
+  const vehiclePatterns=[/creta/i,/nexon/i,/swift/i,/city/i,/innova/i,/fortuner/i,/thar/i,/scorpio/i,/harrier/i,/safari/i,/baleno/i,/i20/i,/seltos/i,/hector/i,/compass/i,/activa/i,/royal enfield/i,/ktm/i,/duke/i,/bullet/i,/classic 350/i,/meteor/i,/dominar/i,/bmw/i,/audi/i,/mercedes/i];
+  const cityPatterns=[/mumbai/i,/delhi/i,/bangalore/i,/bengaluru/i,/hyderabad/i,/chennai/i,/kolkata/i,/pune/i,/ahmedabad/i,/jaipur/i,/surat/i,/lucknow/i,/gurgaon/i,/noida/i,/chandigarh/i,/kochi/i];
+  for(const p of vehiclePatterns){const m=text.match(p);if(m&&!detectedVehicle)detectedVehicle=m[0]}
+  for(const p of cityPatterns){const m=text.match(p);if(m&&!detectedCity)detectedCity=m[0]}
+}
+
+// Log the chat for SEO pattern detection (fire and forget)
+function logChat(queryText){
+  try{
+    fetch(LOG_CHAT_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        product_slug:PRODUCT_SLUG,product_name:PRODUCT_NAME,
+        product_brand:PRODUCT_BRAND,product_category:PRODUCT_CATEGORY,
+        vehicle_mentioned:detectedVehicle,city_mentioned:detectedCity,
+        query_text:queryText
+      })
+    }).catch(()=>{});
+  }catch(e){}
+}
+
+// Show share summary button after 3+ messages
+function maybeShowSummaryOffer(){
+  if(msgCount!==3)return;
+  const d=document.createElement('div');
+  d.className='msg';
+  d.innerHTML='<div class="msg-av">A</div><div class="msg-bubble">Would you like me to send you a summary of this conversation with a direct link to buy? <button onclick="saveSummary()" style="background:#f5a623;color:#0c0c0c;border:none;border-radius:6px;padding:5px 12px;font-size:.8rem;font-weight:700;cursor:pointer;margin-left:8px">Yes, get my link</button></div>';
+  msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight;
+}
+
+// Save summary and show the share link in chat
+async function saveSummary(){
+  try{
+    addBubble('Saving your summary...',false);
+    const lastAdvice=history.filter(m=>m.role==='assistant').slice(-1)[0]?.content||'';
+    const res=await fetch(SAVE_SUMMARY_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        product_slug:PRODUCT_SLUG,product_name:PRODUCT_NAME,
+        product_price:PRODUCT_PRICE,product_image:PRODUCT_IMAGE,
+        shopify_url:SHOPIFY_URL,vehicle:detectedVehicle,
+        situation:'Customer asked about '+PRODUCT_NAME+(detectedVehicle?' for their '+detectedVehicle:''),
+        key_advice:lastAdvice,conversation:history
+      })
+    });
+    const data=await res.json();
+    if(data.shareUrl){
+      const d=document.createElement('div');
+      d.className='msg';
+      d.innerHTML='<div class="msg-av">A</div><div class="msg-bubble">Here\'s your personalised summary: <a href="'+data.shareUrl+'" target="_blank" style="color:#f5a623;font-weight:600">'+data.shareUrl+'</a><br><small style="color:#4a5a78">Save this link — it includes the product details and our conversation.</small></div>';
+      msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight;
+
+      // Also create a WhatsApp share button
+      const waMsg=encodeURIComponent('Here is the product Arjun recommended for you: '+data.shareUrl);
+      const wb=document.createElement('div');
+      wb.className='msg';
+      wb.innerHTML='<div class="msg-av">A</div><div class="msg-bubble"><a href="https://wa.me/?text='+waMsg+'" target="_blank" style="background:#25d366;color:white;border:none;border-radius:8px;padding:8px 14px;font-size:.82rem;font-weight:600;text-decoration:none;display:inline-block">Share on WhatsApp →</a></div>';
+      msgsEl.appendChild(wb);msgsEl.scrollTop=msgsEl.scrollHeight;
+    }
+  }catch(e){addBubble('Could not generate summary. Please try WhatsApp instead.',false)}
+}
+
 async function sendChat(){
   if(busy)return;
   const text=textEl.value.trim();if(!text)return;
   textEl.value='';addBubble(text,true);
+  extractContext(text);
   history.push({role:'user',content:text});
   busy=true;textEl.disabled=true;sendEl.disabled=true;showTyping();
   try{
@@ -565,6 +645,9 @@ async function sendChat(){
     const reply=data.content?.[0]?.text||'Sorry, try again.';
     history.push({role:'assistant',content:reply});
     addBubble(reply,false);
+    msgCount++;
+    logChat(text);
+    maybeShowSummaryOffer();
   }catch(e){hideTyping();addBubble('Connection issue — please try again.',false)}
   busy=false;textEl.disabled=false;sendEl.disabled=false;textEl.focus();
 }
