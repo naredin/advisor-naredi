@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Advisor | naredi.in — India's Automotive Tools Expert</title>
-<meta name="description" content="Expert advice on CTEK battery chargers, Rislone additives, OBD scanners and jump starters. 74 products, honest recommendations from Arjun.">
-<link rel="canonical" href="https://advisor.naredi.in/">
-<meta property="og:title" content="Product Advisor | naredi.in — India's Automotive Tools Expert">
-<meta property="og:description" content="Expert advice on CTEK battery chargers, Rislone additives, OBD scanners and jump starters. 74 products, honest recommendations from Arjun.">
-<meta property="og:url" content="https://advisor.naredi.in/">
+<title>Ask Arjun — naredi.in Automotive Advisor</title>
+<meta name="description" content="Tell Arjun your vehicle and situation. He will recommend the right CTEK charger, battery tester, OBD scanner or Rislone additive for you.">
+<link rel="canonical" href="https://advisor.naredi.in/ask-arjun.html">
+<meta property="og:title" content="Ask Arjun — naredi.in Automotive Advisor">
+<meta property="og:description" content="Tell Arjun your vehicle and situation. He will recommend the right CTEK charger, battery tester, OBD scanner or Rislone additive for you.">
+<meta property="og:url" content="https://advisor.naredi.in/ask-arjun.html">
 
 <meta property="og:site_name" content="naredi.in">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -274,100 +274,38 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
 
 <div class="page-wrap">
 
-    <div class="index-hero">
-      <div class="section-label">naredi.in · Since 2014</div>
-      <h1>India's <span>Automotive</span><br>Tools Advisor</h1>
-      <p>Expert guidance on CTEK chargers, battery testers, OBD scanners, jump starters and Rislone additives. Ask Arjun anything — he's trained on 10 years of naredi.in customer conversations.</p>
-      <a href="/ask-arjun.html" class="btn-buy" style="display:inline-flex;width:fit-content">Ask Arjun about your vehicle →</a>
+<div class="ask-arjun-page">
+  <div class="ask-arjun-intro">
+    <div class="section-label">Arjun — naredi.in Advisor</div>
+    <h1 class="ask-arjun-title">What does your vehicle need?</h1>
+    <p class="ask-arjun-sub">Tell Arjun your vehicle and situation — he'll recommend the right product from naredi.in's range.</p>
+    <div class="suggestions">
+      <button class="suggestion" onclick="startChat('My car battery keeps dying — what do I need?')">My car battery keeps dying — what do I need?</button><button class="suggestion" onclick="startChat('I have a Royal Enfield — what charger should I get?')">I have a Royal Enfield — what charger should I get?</button><button class="suggestion" onclick="startChat('My check engine light is on')">My check engine light is on</button><button class="suggestion" onclick="startChat('I need a jump starter for my SUV')">I need a jump starter for my SUV</button><button class="suggestion" onclick="startChat('My engine is leaking oil')">My engine is leaking oil</button>
     </div>
-    <div class="section-label" style="margin-top:48px">Browse by Category</div>
-    <div class="cats-grid" id="categories" style="margin-bottom:56px"><a href="/products/category-battery-chargers.html" class="cat-card">
-      <div class="cat-name">Battery Chargers</div>
-      <div class="cat-desc">CTEK smart 12V and 24V battery chargers for cars, bikes, trucks and workshops. Official authorized dealer.</div>
-      <div class="cat-count">19 products →</div>
-    </a><a href="/products/category-battery-testers.html" class="cat-card">
-      <div class="cat-name">Battery Testers</div>
-      <div class="cat-desc">Professional battery analyzers from Autool, Foxwell, Konnwei and CTEK. Test battery health in 10 seconds.</div>
-      <div class="cat-count">12 products →</div>
-    </a><a href="/products/category-performance-additives.html" class="cat-card">
-      <div class="cat-name">Performance Additives</div>
-      <div class="cat-desc">Rislone engine, fuel, transmission and cooling system additives. American-formulated since 1921.</div>
-      <div class="cat-count">24 products →</div>
-    </a><a href="/products/category-jump-starters.html" class="cat-card">
-      <div class="cat-name">Jump Starters</div>
-      <div class="cat-desc">OzCharge batteryless supercapacitor and Lokithor lithium jump starters for all vehicles.</div>
-      <div class="cat-count">4 products →</div>
-    </a><a href="/products/category-obd-tools.html" class="cat-card">
-      <div class="cat-name">OBD Tools</div>
-      <div class="cat-desc">OBD2 diagnostic scanners from Autool, Konnwei and Blue Driver. Read fault codes in 30 seconds.</div>
-      <div class="cat-count">6 products →</div>
-    </a><a href="/products/category-accessories.html" class="cat-card">
-      <div class="cat-name">Accessories</div>
-      <div class="cat-desc">CTEK Comfort Connect eyelets, bumper cases, indicator panels and charging accessories.</div>
-      <div class="cat-count">8 products →</div>
-    </a><a href="/products/category-bundles.html" class="cat-card">
-      <div class="cat-name">Bundles</div>
-      <div class="cat-desc">Value bundles combining chargers, testers and accessories. Save versus buying separately.</div>
-      <div class="cat-count">1 products →</div>
-    </a></div>
-    <div class="section-label">Popular Products</div>
-    <div class="products-grid"><a href="/products/ctek-mxs-5-advanced-12v-smart-trickle-car-and-bike-battery-charger.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/mxs5.0.jpg" alt="CTEK MXS 5.0 Smart 12V Battery Charger for Cars & Superbikes" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">CTEK</div>
-        <div class="prod-name">CTEK MXS 5.0 Smart 12V Battery Charger for Cars & Superbikes</div>
-        <div class="prod-price">₹13,900</div>
+  </div>
+
+  <div class="chat-box" style="height:520px">
+    <div class="chat-hdr">
+      <div class="chat-avatar">A</div>
+      <div>
+        <div class="chat-hdr-name">Arjun — naredi.in Advisor</div>
+        <div class="chat-status"><div class="online-dot"></div> Online now</div>
       </div>
-    </a><a href="/products/ctek-ct5-powersport.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/ct5powersport3.jpg" alt="CTEK CT5 PowerSport Smart 12V Superbike Battery Charger India" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">CTEK</div>
-        <div class="prod-name">CTEK CT5 PowerSport Smart 12V Superbike Battery Charger India</div>
-        <div class="prod-price">₹13,900</div>
+    </div>
+    <div class="msgs" id="msgs">
+      <div class="msg">
+        <div class="msg-av">A</div>
+        <div class="msg-bubble">Hi! I'm Arjun, naredi.in's automotive advisor. Tell me about your vehicle and what you need — I'll recommend the right product for you.</div>
       </div>
-    </a><a href="/products/ctek-mxs-10.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/ctekmxs10.jpg" alt="CTEK MXS 10 - 10A Professional Charger for Workshops & Fleets" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">CTEK</div>
-        <div class="prod-name">CTEK MXS 10 - 10A Professional Charger for Workshops & Fleets</div>
-        <div class="prod-price">₹31,900</div>
-      </div>
-    </a><a href="/products/konnwei-kw210.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/kw210MainImage.jpg" alt="Konnwei KW210 Battery Tester | Best Budget 12V Analyzer for Cars Bikes India" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">Konnwei</div>
-        <div class="prod-name">Konnwei KW210 Battery Tester | Best Budget 12V Analyzer for Cars Bikes India</div>
-        <div class="prod-price">₹2,900</div>
-      </div>
-    </a><a href="/products/autool-bt860.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/Autool860.jpg" alt="AUTOOL BT860 Battery Tester with Printer | Professional 12V/24V Analyzer India" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">Autool</div>
-        <div class="prod-name">AUTOOL BT860 Battery Tester with Printer | Professional 12V/24V Analyzer India</div>
-        <div class="prod-price">₹17,900</div>
-      </div>
-    </a><a href="/products/foxwell-bt-780-12v-and-24v-battery-tester-with-inbuilt-printer.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/FoxwellBT780.jpg" alt="Foxwell BT-780 Battery Tester | Best Professional 12V/24V Analyzer with Printer India" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">Foxwell</div>
-        <div class="prod-name">Foxwell BT-780 Battery Tester | Best Professional 12V/24V Analyzer with Printer India</div>
-        <div class="prod-price">₹19,400</div>
-      </div>
-    </a><a href="/products/rislone-hy-per-fuel-complete-fuel-system-cleaner-44700.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/44700.png" alt="Rislone Hy-per Fuel Complete Fuel System Cleaner Petrol (44700) 500ml | Restore Power Mileage for Indian Vehicles" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">Rislone</div>
-        <div class="prod-name">Rislone Hy-per Fuel Complete Fuel System Cleaner Petrol (44700) 500ml | Restore Power Mileage for Indian Vehicles</div>
-        <div class="prod-price">₹2,400</div>
-      </div>
-    </a><a href="/products/ozcharge-rescuemate.html" class="prod-card">
-      <div class="prod-img"><img src="https://naredi.in/cdn/shop/files/OC-RM500.png" alt="OzCharge RescueMate 500 | Best Compact Batteryless Jump Starter - Instant 500A Power India" loading="lazy" width="200" height="160"></div>
-      <div class="prod-body">
-        <div class="prod-brand">OzCharge</div>
-        <div class="prod-name">OzCharge RescueMate 500 | Best Compact Batteryless Jump Starter - Instant 500A Power India</div>
-        <div class="prod-price">₹29,400</div>
-      </div>
-    </a></div>
+    </div>
+    <div class="chat-input">
+      <input class="chat-text" id="chatText" type="text" placeholder="e.g. I have a Hyundai Creta and my battery keeps dying..." onkeydown="if(event.key==='Enter')sendChat()">
+      <button class="chat-send" id="chatSend" onclick="sendChat()">
+        <svg viewBox="0 0 24 24"><path d="M2 21L23 12 2 3v7l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
 </div>
 
 <footer>
@@ -381,6 +319,53 @@ footer{border-top:1px solid var(--border);padding:28px 32px;display:flex;align-i
   <div class="footer-note">Authorized dealer · Free shipping India · Est. 2014</div>
 </footer>
 
-<script></script>
+<script>
+const SYSTEM='You are Arjun, naredi.in\'s automotive advisor. The customer has come to you directly without selecting a product yet. Your job is to understand their vehicle and situation, then recommend the right naredi.in product.\n\nNAREDI.IN PRODUCTS:\nBattery Chargers (CTEK): MXS 5.0 (Rs.13900, 12V cars), MXS 3.8 (Rs.11400, bikes/scooters), MXS 7.0 (Rs.27900, large SUVs), MXS 10 (Rs.31900, workshops), CT5 PowerSport (Rs.13900, superbikes), CT5 Start Stop (Rs.13900, start-stop cars), XS 0.8 (Rs.9900, small scooters), NXT 5 (Rs.18900, all 12V adaptive), CS ONE (Rs.29900, app-controlled)\nBattery Testers: KW210 (Rs.2900, home use), KW600 (Rs.7900, mid-range), BT860 (Rs.17900, workshop with printer), Foxwell BT780 (Rs.19400, professional), CTEK Pro Tester (Rs.69900, dealership)\nOBD Scanners: KW850 (Rs.4500, basic), CS520 (Rs.16900, multi-system), CS606 (Rs.58900, professional with service resets)\nJump Starters: OzCharge RescueMate 500 (Rs.29400, supercapacitor), RescueMate 750 (Rs.30400, large SUVs), Lokithor JA300 (Rs.28900, lithium with compressor)\nAdditives (Rislone): Fuel System Cleaner (Rs.2400), Engine Oil Treatment (Rs.1900), Stop Leak products (Rs.1900-2900)\n\nNAREDI POLICIES: Free shipping, 14-day returns, authorized dealer since 2014, WhatsApp +91 93112 11157\n\nYOUR JOB:\n- Start by asking the customer what vehicle they have and what problem or need they want to address\n- Once you understand, recommend the specific product with the price\n- Include the product page link in this format: advisor.naredi.in/products/SLUG.html\n- Be conversational and direct — 3-4 sentences max per reply\n- If they want to buy, give them: advisor.naredi.in/products/SLUG.html or WhatsApp +91 93112 11157\n- Plain text only, no markdown';
+const PROXY='https://crm-zoho-backend.replit.app/api/arjun';
+const SAVE_SUMMARY_URL='https://crm-zoho-backend.replit.app/api/arjun/save-summary';
+const LOG_CHAT_URL='https://crm-zoho-backend.replit.app/api/arjun/log-chat';
+let history=[{role:'assistant',content:'Hi! I am Arjun, naredi.in\'s automotive advisor. Tell me about your vehicle and what you need — I will recommend the right product for you.'}];
+let busy=false;
+let msgCount=0;
+let detectedVehicle='';
+const msgsEl=document.getElementById('msgs');
+const textEl=document.getElementById('chatText');
+const sendEl=document.getElementById('chatSend');
+
+function addBubble(text,isUser){
+  const d=document.createElement('div');d.className='msg'+(isUser?' user':'');
+  const h=text.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+  d.innerHTML=isUser?'<div class="msg-bubble">'+h+'</div>':'<div class="msg-av">A</div><div class="msg-bubble">'+h+'</div>';
+  msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight;
+}
+function showTyping(){const d=document.createElement('div');d.className='typing';d.id='typing';d.innerHTML='<div class="msg-av">A</div><div class="typing-bub"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight}
+function hideTyping(){const t=document.getElementById('typing');if(t)t.remove()}
+function startChat(msg){textEl.value=msg;sendChat()}
+
+function extractVehicle(text){
+  const patterns=[/creta/i,/nexon/i,/swift/i,/city/i,/innova/i,/fortuner/i,/thar/i,/scorpio/i,/harrier/i,/baleno/i,/i20/i,/seltos/i,/activa/i,/royal enfield/i,/ktm/i,/duke/i,/bullet/i];
+  for(const p of patterns){const m=text.match(p);if(m){detectedVehicle=m[0];break}}
+}
+
+async function sendChat(){
+  if(busy)return;
+  const text=textEl.value.trim();if(!text)return;
+  textEl.value='';addBubble(text,true);
+  extractVehicle(text);
+  history.push({role:'user',content:text});
+  busy=true;textEl.disabled=true;sendEl.disabled=true;showTyping();
+  try{
+    const res=await fetch(PROXY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:SYSTEM,messages:history})});
+    const data=await res.json();hideTyping();
+    if(data.error){addBubble('Sorry, having a small issue. Please try again.',false);busy=false;textEl.disabled=false;sendEl.disabled=false;return;}
+    const reply=data.content?.[0]?.text||'Sorry, try again.';
+    history.push({role:'assistant',content:reply});
+    addBubble(reply,false);
+    msgCount++;
+    try{fetch(LOG_CHAT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({product_slug:'ask-arjun',product_name:'General Inquiry',product_brand:'',product_category:'',vehicle_mentioned:detectedVehicle,query_text:text})}).catch(()=>{})}catch(e){}
+  }catch(e){hideTyping();addBubble('Connection issue — please try again.',false)}
+  busy=false;textEl.disabled=false;sendEl.disabled=false;textEl.focus();
+}
+</script>
 </body>
 </html>
