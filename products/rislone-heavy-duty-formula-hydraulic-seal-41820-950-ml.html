@@ -522,11 +522,19 @@ const msgsEl=document.getElementById('msgs');
 const textEl=document.getElementById('chatText');
 const sendEl=document.getElementById('chatSend');
 
+function linkify(t){
+  return t.split(' ').map(function(w){
+    if(w.indexOf('advisor.naredi.in/')>-1||w.indexOf('http')===0){
+      var url=w.indexOf('http')===0?w:'https://'+w;
+      return '<a href="'+url+'" target="_blank" style="color:#f5a623;text-decoration:underline">'+w+'</a>';
+    }
+    return w;
+  }).join(' ');
+}
 function addBubble(text,isUser){
   const d=document.createElement('div');d.className='msg'+(isUser?' user':'');
   let h=text.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
-  h=h.replace(/(https?://[^s<]+)/g,'<a href="$1" target="_blank" style="color:#f5a623;text-decoration:underline">$1</a>');
-  h=h.replace(/(?<!https?://)((advisor.naredi.in)/[^s<]+)/g,'<a href="https://$1" target="_blank" style="color:#f5a623;text-decoration:underline">$1</a>');
+  if(!isUser)h=linkify(h);
   d.innerHTML=isUser?'<div class="msg-bubble">'+h+'</div>':'<div class="msg-av">A</div><div class="msg-bubble">'+h+'</div>';
   msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight;
 }
