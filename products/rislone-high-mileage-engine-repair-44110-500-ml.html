@@ -528,6 +528,7 @@ let busy=false;
 let detectedVehicle='';
 let detectedCity='';
 let msgCount=0;
+const sessionId=Math.random().toString(36).substring(2,10);
 const msgsEl=document.getElementById('msgs');
 const textEl=document.getElementById('chatText');
 const sendEl=document.getElementById('chatSend');
@@ -552,12 +553,13 @@ function showTyping(){const d=document.createElement('div');d.className='typing'
 function hideTyping(){const t=document.getElementById('typing');if(t)t.remove()}
 function startChat(msg){textEl.value=msg;sendChat()}
 
-// Extract vehicle and city from user messages (simple keyword detection)
+// Extract vehicle and city from user messages — scans full conversation history
 function extractContext(text){
-  const vehiclePatterns=[/creta/i,/nexon/i,/swift/i,/city/i,/innova/i,/fortuner/i,/thar/i,/scorpio/i,/harrier/i,/safari/i,/baleno/i,/i20/i,/seltos/i,/hector/i,/compass/i,/activa/i,/royal enfield/i,/ktm/i,/duke/i,/bullet/i,/classic 350/i,/meteor/i,/dominar/i,/bmw/i,/audi/i,/mercedes/i];
-  const cityPatterns=[/mumbai/i,/delhi/i,/bangalore/i,/bengaluru/i,/hyderabad/i,/chennai/i,/kolkata/i,/pune/i,/ahmedabad/i,/jaipur/i,/surat/i,/lucknow/i,/gurgaon/i,/noida/i,/chandigarh/i,/kochi/i];
-  for(const p of vehiclePatterns){const m=text.match(p);if(m&&!detectedVehicle)detectedVehicle=m[0]}
-  for(const p of cityPatterns){const m=text.match(p);if(m&&!detectedCity)detectedCity=m[0]}
+  const allText=history.map(function(m){return m.content}).join(' ')+' '+text;
+  const vehiclePatterns=[/mgs+hector/i,/mgs+astor/i,/mgs+gloster/i,/mgs+zs/i,/hyundais+w+/i,/marutis+w+/i,/tatas+w+/i,/mahindras+w+/i,/hondas+w+/i,/toyotas+w+/i,/kias+w+/i,/skodas+w+/i,/volkswagens+w+/i,/bmws+w+/i,/mercedess+w+/i,/audis+w+/i,/royals+enfields+w+/i,/bajajs+w+/i,/tvss+w+/i,/heros+w+/i,/creta/i,/nexon/i,/swift/i,/innova/i,/fortuner/i,/thar/i,/scorpio/i,/harrier/i,/safari/i,/baleno/i,/i20/i,/seltos/i,/hector/i,/compass/i,/xuv700/i,/xuv300/i,/xuv400/i,/brezza/i,/ertiga/i,/activa/i,/duke/i,/bullet/i,/classic 350/i,/meteor/i,/dominar/i,/splendor/i,/pulsar/i,/apache/i,/jupiter/i,/ntorq/i];
+  const cityPatterns=[/mumbai/i,/delhi/i,/bangalore/i,/bengaluru/i,/hyderabad/i,/chennai/i,/kolkata/i,/pune/i,/ahmedabad/i,/jaipur/i,/surat/i,/lucknow/i,/gurgaon/i,/noida/i,/chandigarh/i,/kochi/i,/indore/i,/bhopal/i,/nagpur/i,/coimbatore/i,/vizag/i,/visakhapatnam/i,/vadodara/i,/ludhiana/i,/agra/i,/patna/i];
+  for(const p of vehiclePatterns){const m=allText.match(p);if(m&&!detectedVehicle){detectedVehicle=m[0].trim();break}}
+  for(const p of cityPatterns){const m=allText.match(p);if(m&&!detectedCity){detectedCity=m[0].trim();break}}
 }
 
 // Log the chat for SEO pattern detection (fire and forget)
@@ -570,7 +572,7 @@ function logChat(queryText){
         product_slug:PRODUCT_SLUG,product_name:PRODUCT_NAME,
         product_brand:PRODUCT_BRAND,product_category:PRODUCT_CATEGORY,
         vehicle_mentioned:detectedVehicle,city_mentioned:detectedCity,
-        query_text:queryText
+        query_text:queryText,session_id:sessionId
       })
     }).catch(()=>{});
   }catch(e){}
